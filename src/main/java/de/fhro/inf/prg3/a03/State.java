@@ -11,7 +11,7 @@ abstract public class State {
     protected final static Logger logger = LogManager.getLogger();
 
     protected final Animal animal;
-    private int time;
+    protected int time;
     protected int duration;
 
     public State(Animal animal, int duration){

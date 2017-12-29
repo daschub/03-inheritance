@@ -3,6 +3,8 @@ package de.fhro.inf.prg3.a03.States;
 import de.fhro.inf.prg3.a03.Animal;
 import de.fhro.inf.prg3.a03.State;
 
+
+
 public class SleepingState extends State {
 
 
@@ -12,6 +14,7 @@ public class SleepingState extends State {
 
     @Override
     public State successor() {
-        return null;
+            logger.info("Yoan... getting hungry!");
+            return new HungryState(animal, animal.getAwake());
     }
 }

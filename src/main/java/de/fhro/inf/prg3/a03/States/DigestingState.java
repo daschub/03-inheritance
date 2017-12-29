@@ -5,12 +5,17 @@ import de.fhro.inf.prg3.a03.State;
 
 public class DigestingState extends State {
 
-    public DigestingState(Animal animal, int duration) {
+    private final int remainingWakeTime;
+
+    public DigestingState(Animal animal, int duration, int remainingWakeTime) {
+
         super(animal, duration);
+        this.remainingWakeTime = remainingWakeTime;
     }
 
     @Override
     public State successor() {
-        return null;
+        logger.info("Getting in a playful mood!");
+        return new PlayfulState(animal, remainingWakeTime - animal.getDigest());
     }
 }

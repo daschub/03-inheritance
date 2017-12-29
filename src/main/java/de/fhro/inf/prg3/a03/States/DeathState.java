@@ -11,6 +11,6 @@ public class DeathState extends State {
 
     @Override
     public State successor() {
-        return null;
+        throw new IllegalStateException("This is no buddhistic animal - reincarnation is no option!");
     }
 }

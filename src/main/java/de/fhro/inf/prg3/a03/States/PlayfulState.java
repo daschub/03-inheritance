@@ -11,6 +11,7 @@ public class PlayfulState extends State {
 
     @Override
     public State successor() {
-        return null;
+        logger.info("Yoan... getting tired!");
+        return new SleepingState(animal, animal.getSleep());
     }
 }
