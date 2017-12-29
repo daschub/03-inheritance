@@ -30,7 +30,7 @@ public class Animal {
 	private final int collectionAmount;
 	private final GenusSpecies genusSpecies;
 
-	// those species this animal likes to eat
+	// the species this animal likes to eat
 	private final GenusSpecies[] devours;
 
 	private int time = 0;
@@ -49,7 +49,7 @@ public class Animal {
 	}
 
 	public void tick(){
-		logger.info("tick()");
+		/**logger.info("tick()");
 		time++;
 		switch (state) {
 			case SLEEPING:
@@ -86,7 +86,7 @@ public class Animal {
 				throw new IllegalStateException("Unknown cat state " + state.name());
 		}
 
-		logger.info(state.name());
+		logger.info(state.name());  */
 
 	}
 
